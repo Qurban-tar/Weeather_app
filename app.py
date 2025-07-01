@@ -1,3 +1,12 @@
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+
+
+api_key = os.getenv("VC_API_KEY")
+
 import streamlit as st
 import requests
 
@@ -7,7 +16,6 @@ st.write("Get real-time weather updates for any city in the world.")
 city = st.text_input("Enter city name", "Karachi")
 
 
-api_key = "B3D6NSSNKMSZ3F8DCG6E85JR3"  
 
 url = (
     f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
